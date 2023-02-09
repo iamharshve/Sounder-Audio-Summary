@@ -4,7 +4,7 @@ Audio Summary Python Script
 Github Repo Link - https://github.com/iamharshve/Sounder-Audio-Summary
 
 
-How to Summarize Audio File?
+How to __Summarize Audio File?__
 
 1. Transcribe Audio File using API service and then it's broken into individual paragraphs
 2. Summarization module of API summarizes individual paragraphs and returns audio summary
@@ -33,19 +33,19 @@ Steps are demonstrated below(please refer to python script for more details):
 
 
 
-__Alternative way__ to Accomplish the Summary of text would be to Input the text to Transformer Summarizer of BART or t5 or other similar pre-trained model.
+__Alternative way__ to Accomplish the Summary of text would be to Input the text to __Transformer Summarizer of BART or t5__ or other similar pre-trained model.
 
 
-Sample code below:
+Sample code for generating summary using pre-trained model below:
 
 
-from transformers import pipeline
+__from transformers import pipeline__
 
-summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")
+__summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")__
 
-summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']
+__summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']__
 
-print(summary_text)
+__print(summary_text)__
 
 
 
