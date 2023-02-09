@@ -6,8 +6,8 @@ Github Repo Link - https://github.com/iamharshve/Sounder-Audio-Summary
 
 How to Summarize Audio File?
 
-1. Transcribe Audio File and then it's broken into individual paragraphs
-2. Summarization module summarizes individual paragraphs and returns audio summary
+1. Transcribe Audio File using API service and then it's broken into individual paragraphs
+2. Summarization module of API summarizes individual paragraphs and returns audio summary
 
 
 Steps are demonstrated below:
@@ -29,3 +29,22 @@ Steps are demonstrated below:
 8. Run the Pipeline
 
 9. We can access the Summary with chapter key of resultant file
+
+
+
+Alternative way to Accomplish the Summary of text would be to Input the text to Transformer Summarizer of BART or t5 or other similar pre-trained model.
+
+
+Sample code below:
+
+
+from transformers import pipeline
+
+summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")
+
+summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']
+
+print(summary_text)
+
+
+
