@@ -10,7 +10,7 @@ How to Summarize Audio File?
 2. Summarization module of API summarizes individual paragraphs and returns audio summary
 
 
-Steps are demonstrated below:
+Steps are demonstrated below(please refer to python script for more details):
 
 1. Get the API Token for Assembly AI(API service for transcription)
 
@@ -29,6 +29,7 @@ Steps are demonstrated below:
 8. Run the Pipeline
 
 9. We can access the Summary with chapter key of resultant file
+
 
 
 
