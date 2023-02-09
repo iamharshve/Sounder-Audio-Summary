@@ -31,17 +31,20 @@ Steps are demonstrated below(please refer to python script for more details):
 9. We can access the Summary with chapter key of resultant file
 
 
-
+##
+##
+##
 
 __Alternative way__ to Accomplish the Summary of text would be to Input the text to __Transformer Summarizer of BART or t5__ or other similar pre-trained model.
 
 
 Sample code for __generating summary__ using __pre-trained model__ below:
 
+##
 
 from transformers import pipeline
 
-summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")
+__summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")__
 
 summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']
 
