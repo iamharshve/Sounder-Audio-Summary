@@ -36,16 +36,16 @@ Steps are demonstrated below(please refer to python script for more details):
 __Alternative way__ to Accomplish the Summary of text would be to Input the text to __Transformer Summarizer of BART or t5__ or other similar pre-trained model.
 
 
-Sample code for generating summary using pre-trained model below:
+Sample code for __generating summary__ using __pre-trained model__ below:
 
 
-__from transformers import pipeline__
+from transformers import pipeline
 
-__summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")__
+summarizer = pipeline("summarization", model = "t5-base", tokenizer = "t5-base", framework = "tf")
 
-__summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']__
+summary_text = summarizer(text, max_length = 100, min_length = 5, do_sample = False)[0]['summary_text']
 
-__print(summary_text)__
+print(summary_text)
 
 
 
