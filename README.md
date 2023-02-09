@@ -33,7 +33,7 @@ Steps are demonstrated below(please refer to python script for more details):
 
 
 
-Alternative way to Accomplish the Summary of text would be to Input the text to Transformer Summarizer of BART or t5 or other similar pre-trained model.
+__Alternative way__ to Accomplish the Summary of text would be to Input the text to Transformer Summarizer of BART or t5 or other similar pre-trained model.
 
 
 Sample code below:
